@@ -1,0 +1,6 @@
+{
+  "afk_command.commands.afk.enter": "Du är nu AFK",
+  "afk_command.commands.afk.exit": "Du är inte AFK längre",
+  "afk_command.commands.error.invalid.player": "Den valda entiteten är inte en spelare.",
+  "afk_command.commands.error.invalid.source": "Ingen spelare vald. Måste specificera vilken spelare som ska sättas AFK."
+}

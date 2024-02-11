@@ -15,7 +15,7 @@ public class SpanishLanguageProvider extends LanguageProvider {
     protected void addTranslations() {
         add(LangKeys.COMMAND_ANSWER_ENTER.key(), "Ahora estás AFK");
         add(LangKeys.COMMAND_ANSWER_EXIT.key(), "Ya no estás AFK");
-        add(LangKeys.COMMAND_ERROR_INVALID_SOURCE.key(), "Si no es un jugador el que ejecuta el comando, se debe especificar el mismo.");
+        add(LangKeys.COMMAND_ERROR_INVALID_SOURCE.key(), "Ningún jugador seleccionado. Se debe especificar el jugador a mandar AFK.");
         add(LangKeys.COMMAND_ERROR_INVALID_PLAYER.key(), "La entidad seleccionada no es un jugador.");
     }
 }

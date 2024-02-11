@@ -1,11 +1,12 @@
 package com.aylanj123.afkcommand;
 
-import com.aylanj123.afkcommand.config.RegisterConfig;
 import com.aylanj123.afkcommand.eventhandler.*;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
@@ -25,7 +26,7 @@ public class AFKCommandMod
         forgeEventBus.register(new ServerEventHandler());
         modEventBus.register(new CommonEventHandler());
         modEventBus.register(new ClientEventHandler());
-        RegisterConfig.registerConfigCommon();
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
 }

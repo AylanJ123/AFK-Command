@@ -2,5 +2,5 @@
   "afk_command.commands.afk.enter": "Ahora estás AFK",
   "afk_command.commands.afk.exit": "Ya no estás AFK",
   "afk_command.commands.error.invalid.player": "La entidad seleccionada no es un jugador.",
-  "afk_command.commands.error.invalid.source": "Si no es un jugador el que ejecuta el comando, se debe especificar el mismo."
+  "afk_command.commands.error.invalid.source": "Ningún jugador seleccionado. Se debe especificar el jugador a mandar AFK."
 }

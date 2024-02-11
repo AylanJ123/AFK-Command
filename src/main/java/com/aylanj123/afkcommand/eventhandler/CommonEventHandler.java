@@ -1,7 +1,6 @@
 package com.aylanj123.afkcommand.eventhandler;
 import com.aylanj123.afkcommand.AFKCommandMod;
-import com.aylanj123.afkcommand.language.EnglishLanguageProvider;
-import com.aylanj123.afkcommand.language.SpanishLanguageProvider;
+import com.aylanj123.afkcommand.language.*;
 import net.minecraft.data.DataProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,6 +19,10 @@ public class CommonEventHandler {
         "es_ve", "es_uy", "es_mx", "es_es", "es_ec", "es_cl", "es_ar"
     ));
 
+    private static final List<String> germanLocales = new ArrayList<>(List.of(
+        "de_de", "de_at", "de_ch", "nds_de"
+    ));
+
     @SubscribeEvent
     public void gatherData(GatherDataEvent event) {
         for (String locale : englishLocales)
@@ -34,6 +37,17 @@ public class CommonEventHandler {
                     (DataProvider.Factory<SpanishLanguageProvider>)
                             output -> new SpanishLanguageProvider(output, locale)
             );
+        for (String locale : germanLocales)
+            event.getGenerator().addProvider(
+                    event.includeClient(),
+                    (DataProvider.Factory<GermanLanguageProvider>)
+                            output -> new GermanLanguageProvider(output, locale)
+            );
+        event.getGenerator().addProvider(
+                event.includeClient(),
+                (DataProvider.Factory<SwedishLanguageProvider>)
+                        output -> new SwedishLanguageProvider(output, "sv_se")
+        );
         AFKCommandMod.LOGGER.info("Generating new data");
     }
 

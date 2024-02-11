@@ -2,5 +2,5 @@
   "afk_command.commands.afk.enter": "You are now AFK",
   "afk_command.commands.afk.exit": "You aren't AFK anymore",
   "afk_command.commands.error.invalid.player": "The selected entity is not a player.",
-  "afk_command.commands.error.invalid.source": "If the player doesn't execute the command, it must specify what player to put AFK."
+  "afk_command.commands.error.invalid.source": "No player selected. Must specify which player to put AFK"
 }

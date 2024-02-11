@@ -1,0 +1,6 @@
+{
+  "afk_command.commands.afk.enter": "Du bist nun AFK",
+  "afk_command.commands.afk.exit": "Du bist nicht mehr AFK",
+  "afk_command.commands.error.invalid.player": "Die ausgewählte entität ist kein Spieler.",
+  "afk_command.commands.error.invalid.source": "Kein Spieler angegeben. Es muss ein Spieler angegeben werden, der AFK gehen soll."
+}

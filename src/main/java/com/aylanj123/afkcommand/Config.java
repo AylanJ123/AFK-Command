@@ -1,4 +1,4 @@
-package com.aylanj123.afkcommand.config;
+package com.aylanj123.afkcommand;
 
 import com.aylanj123.afkcommand.AFKCommandMod;
 import net.minecraftforge.common.ForgeConfigSpec;
