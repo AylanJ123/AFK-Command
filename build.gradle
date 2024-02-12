@@ -3,6 +3,7 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.spongepowered.mixin' version '0.7.+'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
@@ -11,6 +12,11 @@ group = mod_group_id
 
 base {
     archivesName = mod_id
+}
+
+mixin {
+    add sourceSets.main, "afk_command.refmap.json"
+    config "afk_command.mixins.json"
 }
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
@@ -146,6 +152,8 @@ dependencies {
     implementation fg.deobf(project.dependencies.create("mcjty.theoneprobe:theoneprobe:${top_version}") {
         transitive = false
     })
+
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
