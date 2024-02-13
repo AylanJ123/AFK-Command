@@ -53,7 +53,7 @@ public class AFKStateHandler {
         player.getCapability(PlayerAFKStateProvider.AFK_STATE).ifPresent(cap -> {
             if (cap.isAFK()) return;
             success.set(true);
-            cap.putAFK(finalSource);
+            cap.putAFK(finalSource, player);
         });
         if (!success.get()) throw STATE_APPLIED.create();
         return 1;

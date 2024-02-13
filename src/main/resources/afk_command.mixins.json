@@ -9,6 +9,8 @@
   "mixins": [
   ],
   "client": [
+    "MixinMouseHandler",
+    "MixinKeyboardInput"
   ],
   "minVersion": "0.8",
   "priority": 99999

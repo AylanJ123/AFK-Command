@@ -1,6 +1,7 @@
 package com.aylanj123.afkcommand.eventhandler;
 import com.aylanj123.afkcommand.AFKCommandMod;
 import com.aylanj123.afkcommand.language.*;
+import com.aylanj123.afkcommand.networking.PacketHandler;
 import net.minecraft.data.DataProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -64,6 +65,7 @@ public class CommonEventHandler {
     @SubscribeEvent
     void clientSetUp(FMLCommonSetupEvent event) {
         AFKCommandMod.LOGGER.info("Common Set Up");
+        event.enqueueWork(PacketHandler::register);
     }
 
 }
