@@ -14,11 +14,6 @@ base {
     archivesName = mod_id
 }
 
-mixin {
-    add sourceSets.main, "afk_command.refmap.json"
-    config "afk_command.mixins.json"
-}
-
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -158,6 +153,13 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+}
+
+mixin {
+    add sourceSets.main, "afk_command.refmap.json"
+    config "afk_command.mixins.json"
+    debug.verbose = true
+    debug.export = true
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

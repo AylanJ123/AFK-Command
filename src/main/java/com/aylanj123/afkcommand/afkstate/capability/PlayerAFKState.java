@@ -1,8 +1,6 @@
 package com.aylanj123.afkcommand.afkstate.capability;
 
 import com.aylanj123.afkcommand.AFKCommandMod;
-import net.minecraft.client.Minecraft;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 
 public class PlayerAFKState {
