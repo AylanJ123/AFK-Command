@@ -13,7 +13,7 @@ import org.slf4j.Logger;
 @Mod(AFKCommandMod.MODID)
 public class AFKCommandMod
 {
-    public static final String MODID = "afk_command.mixins.json";
+    public static final String MODID = "afk_command";
 
     // slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
@@ -22,7 +22,6 @@ public class AFKCommandMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
-        modEventBus.register(new ServerEventHandler());
         forgeEventBus.register(new ServerEventHandler());
         modEventBus.register(new CommonEventHandler());
         modEventBus.register(new ClientEventHandler());

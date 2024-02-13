@@ -1,0 +1,8 @@
+{
+  "afk_command.commands.afk.enter": "Você está agora AFK",
+  "afk_command.commands.afk.exit": "Você já não está AFK",
+  "afk_command.commands.afk.other": "O jogador está agora AFK",
+  "afk_command.commands.error.invalid.player": "A entidade selecionada não é um jogador.",
+  "afk_command.commands.error.invalid.source": "Nenhum jogador selecionado. Deve especificar qual jogador para ser posto como AFK.",
+  "afk_command.commands.error.state.applied": "O jogador já estava AFK."
+}

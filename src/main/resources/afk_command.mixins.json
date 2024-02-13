@@ -3,9 +3,13 @@
   "package": "com.aylanj123.afkcommand.mixin",
   "compatibilityLevel": "JAVA_17",
   "refmap": "afk_command.refmap.json",
+  "server": [
+    "MixinSleepStatus"
+  ],
   "mixins": [
   ],
   "client": [
   ],
-  "minVersion": "0.8"
+  "minVersion": "0.8",
+  "priority": 99999
 }

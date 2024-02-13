@@ -23,6 +23,10 @@ public class CommonEventHandler {
         "de_de", "de_at", "de_ch", "nds_de"
     ));
 
+    private static final List<String> portugueseLocales = new ArrayList<>(List.of(
+            "pt_pt", "pt_br"
+    ));
+
     @SubscribeEvent
     public void gatherData(GatherDataEvent event) {
         for (String locale : englishLocales)
@@ -42,6 +46,12 @@ public class CommonEventHandler {
                     event.includeClient(),
                     (DataProvider.Factory<GermanLanguageProvider>)
                             output -> new GermanLanguageProvider(output, locale)
+            );
+        for (String locale : portugueseLocales)
+            event.getGenerator().addProvider(
+                    event.includeClient(),
+                    (DataProvider.Factory<PortugueseLanguageProvider>)
+                            output -> new PortugueseLanguageProvider(output, locale)
             );
         event.getGenerator().addProvider(
                 event.includeClient(),
