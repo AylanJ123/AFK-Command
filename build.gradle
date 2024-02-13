@@ -158,8 +158,6 @@ dependencies {
 mixin {
     add sourceSets.main, "afk_command.refmap.json"
     config "afk_command.mixins.json"
-    debug.verbose = true
-    debug.export = true
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
