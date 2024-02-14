@@ -21,7 +21,7 @@ build
 eclipse
 run
 .run/
-.vscdoe/
+.vscode/
 
 # Files from Forge MDK
 forge*changelog.txt
