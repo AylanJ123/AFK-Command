@@ -1,5 +1,6 @@
 package com.aylanj123.afkcommand.eventhandler;
 import com.aylanj123.afkcommand.AFKCommandMod;
+import com.aylanj123.afkcommand.Config;
 import com.aylanj123.afkcommand.afkstate.capability.PlayerAFKStateProvider;
 import com.aylanj123.afkcommand.registry.CapabilitiesRegistry;
 import com.aylanj123.afkcommand.registry.CommandRegistry;
@@ -49,6 +50,7 @@ public class ServerEventHandler {
     @SubscribeEvent
     void clientSetUp(ServerStartingEvent event) {
         AFKCommandMod.LOGGER.info("Setting up the server");
+        Config.serverSidedLoad();
     }
 
     @SubscribeEvent

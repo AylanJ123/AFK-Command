@@ -25,8 +25,8 @@ public class AFKCommandMod
         forgeEventBus.register(new ServerEventHandler());
         modEventBus.register(new CommonEventHandler());
         modEventBus.register(new ClientEventHandler());
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC);
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Config.CLIENT_SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC, "afk_command-server.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Config.CLIENT_SPEC, "afk_command-client.toml");
     }
 
 }
