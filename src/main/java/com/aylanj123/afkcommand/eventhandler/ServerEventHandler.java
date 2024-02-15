@@ -1,20 +1,35 @@
 package com.aylanj123.afkcommand.eventhandler;
 import com.aylanj123.afkcommand.AFKCommandMod;
 import com.aylanj123.afkcommand.Config;
+import com.aylanj123.afkcommand.afkstate.capability.PlayerAFKState;
 import com.aylanj123.afkcommand.afkstate.capability.PlayerAFKStateProvider;
+import com.aylanj123.afkcommand.afkstate.capability.StateSource;
 import com.aylanj123.afkcommand.registry.CapabilitiesRegistry;
 import com.aylanj123.afkcommand.registry.CommandRegistry;
+import net.minecraft.client.Minecraft;
+import net.minecraft.data.worldgen.DimensionTypes;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraftforge.common.ForgeConfig;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.LogicalSide;
+import net.minecraftforge.server.ServerLifecycleHooks;
+import org.apache.logging.log4j.core.jmx.Server;
+
+import java.util.Arrays;
+import java.util.UUID;
 
 public class ServerEventHandler {
 
@@ -59,6 +74,16 @@ public class ServerEventHandler {
         event.player.getCapability(PlayerAFKStateProvider.AFK_STATE).ifPresent(cap -> {
             if (cap.isAFK()) cap.addTick();
         });
+    }
+
+    @SubscribeEvent
+    void entityJoined(EntityJoinLevelEvent event) {
+        Entity player = event.getEntity();
+        if (player instanceof Player) {
+            player.getCapability(PlayerAFKStateProvider.AFK_STATE).ifPresent(cap -> {
+                if (Config.afkOnLogin) cap.putAFK(StateSource.LOGIN_APPLIED, (ServerPlayer) player);
+            });
+        }
     }
 
 }

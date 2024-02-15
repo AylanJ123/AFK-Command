@@ -16,7 +16,7 @@ public class GermanLanguageProvider extends LanguageProvider {
         add(LangKeys.COMMAND_ANSWER_ENTER.key(), "Du bist nun AFK");
         add(LangKeys.COMMAND_ANSWER_EXIT.key(), "Du bist nicht mehr AFK");
         add(LangKeys.COMMAND_ANSWER_OTHER.key(), "Der Spieler ist nun AFK");
-        add(LangKeys.COMMAND_ERROR_STATE_APPLIED.key(), "TDer Spieler ist bereits AFK.");
+        add(LangKeys.COMMAND_ERROR_STATE_APPLIED_SELF.key(), "TDer Spieler ist bereits AFK.");
         add(LangKeys.COMMAND_ERROR_INVALID_SOURCE.key(), "Kein Spieler angegeben. Es muss ein Spieler angegeben werden, der AFK gehen soll.");
         add(LangKeys.COMMAND_ERROR_INVALID_PLAYER.key(), "Die ausgewählte entität ist kein Spieler.");
     }

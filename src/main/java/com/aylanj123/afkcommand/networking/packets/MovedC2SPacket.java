@@ -1,5 +1,6 @@
 package com.aylanj123.afkcommand.networking.packets;
 
+import com.aylanj123.afkcommand.afkstate.capability.PlayerAFKState;
 import com.aylanj123.afkcommand.afkstate.capability.PlayerAFKStateProvider;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
@@ -28,9 +29,7 @@ public class MovedC2SPacket {
             cx.setPacketHandled(false);
             return;
         }
-        player.getCapability(PlayerAFKStateProvider.AFK_STATE).ifPresent(cap -> {
-            cap.removeAFK(player);
-        });
+        player.getCapability(PlayerAFKStateProvider.AFK_STATE).ifPresent(cap -> cap.removeAFK(player));
         cx.setPacketHandled(true);
     }
 

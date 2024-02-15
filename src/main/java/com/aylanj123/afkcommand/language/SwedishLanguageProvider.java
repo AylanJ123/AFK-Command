@@ -16,7 +16,7 @@ public class SwedishLanguageProvider extends LanguageProvider {
         add(LangKeys.COMMAND_ANSWER_ENTER.key(), "Du är nu AFK");
         add(LangKeys.COMMAND_ANSWER_EXIT.key(), "Du är inte AFK längre");
         add(LangKeys.COMMAND_ANSWER_OTHER.key(), "Spelaren är nu AFK");
-        add(LangKeys.COMMAND_ERROR_STATE_APPLIED.key(), "Spelaren är redan AFK.");
+        add(LangKeys.COMMAND_ERROR_STATE_APPLIED_SELF.key(), "Spelaren är redan AFK.");
         add(LangKeys.COMMAND_ERROR_INVALID_SOURCE.key(), "Ingen spelare vald. Måste specificera vilken spelare som ska sättas AFK.");
         add(LangKeys.COMMAND_ERROR_INVALID_PLAYER.key(), "Den valda entiteten är inte en spelare.");
     }

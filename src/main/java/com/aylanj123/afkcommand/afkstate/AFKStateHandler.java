@@ -1,6 +1,7 @@
 package com.aylanj123.afkcommand.afkstate;
 
 import com.aylanj123.afkcommand.AFKCommandMod;
+import com.aylanj123.afkcommand.Config;
 import com.aylanj123.afkcommand.LangKeys;
 import com.aylanj123.afkcommand.afkstate.capability.PlayerAFKStateProvider;
 import com.aylanj123.afkcommand.afkstate.capability.StateSource;
@@ -17,7 +18,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 public class AFKStateHandler {
 
-    private static final SimpleCommandExceptionType STATE_APPLIED = new SimpleCommandExceptionType(Component.translatable(LangKeys.COMMAND_ERROR_STATE_APPLIED.key()));
+    private static final SimpleCommandExceptionType STATE_APPLIED_SELF = new SimpleCommandExceptionType(Component.translatable(LangKeys.COMMAND_ERROR_STATE_APPLIED_SELF.key()));
+    private static final SimpleCommandExceptionType STATE_APPLIED_OTHER = new SimpleCommandExceptionType(Component.translatable(LangKeys.COMMAND_ERROR_STATE_APPLIED_OTHER.key()));
     private static final SimpleCommandExceptionType INVALID_SOURCE = new SimpleCommandExceptionType(Component.translatable(LangKeys.COMMAND_ERROR_INVALID_SOURCE.key()));
     private static final SimpleCommandExceptionType INVALID_PLAYER = new SimpleCommandExceptionType(Component.translatable(LangKeys.COMMAND_ERROR_INVALID_PLAYER.key()));
 
@@ -37,26 +39,41 @@ public class AFKStateHandler {
 
     private static int addState(ServerPlayer player, CommandContext<CommandSourceStack> cx) throws CommandSyntaxException {
         boolean self = cx.getSource().isPlayer() && cx.getSource().getPlayer() == player;
-        StateSource source = null;
+        AtomicBoolean success = new AtomicBoolean(false);
         if (self) {
-            cx.getSource().sendSuccess(() -> Component.translatable(LangKeys.COMMAND_ANSWER_ENTER.key()), false);
-            AFKCommandMod.LOGGER.info(player.getName().getString() + " has gone AFK");
-            source = StateSource.SELF_APPLY;
-        }
-        if (!self || !cx.getSource().isPlayer()) {
+            AtomicBoolean wasCooldown = new AtomicBoolean(false);
+            player.getCapability(PlayerAFKStateProvider.AFK_STATE).ifPresent(cap -> {
+                if (cap.isAFK()) return;
+                if (
+                    Config.afkCooldown != -1 &&
+                    cap.getLastTimeAFK() != 0 &&
+                    Config.afkCooldown + cap.getLastTimeAFK() >
+                    player.serverLevel().getGameTime()
+                ) {
+                    long timeLeft = (Config.afkCooldown + cap.getLastTimeAFK() - player.serverLevel().getGameTime()) / 20;
+                    player.displayClientMessage(Component.translatable(LangKeys.STATE_ERROR_COOLDOWN.key(), String.valueOf(timeLeft)), true);
+                    wasCooldown.set(true);
+                    return;
+                }
+                if (Config.chatConfirmation) cx.getSource().sendSuccess(() -> Component.translatable(LangKeys.COMMAND_ANSWER_ENTER.key()), false);
+                AFKCommandMod.LOGGER.info(player.getName().getString() + " has gone AFK");
+                cap.putAFK(StateSource.SELF_APPLY, player);
+                success.set(true);
+            });
+            if (success.get()) return 1;
+            else if (!wasCooldown.get()) throw STATE_APPLIED_SELF.create();
+        } else {
             cx.getSource().sendSuccess(() -> Component.translatable(LangKeys.COMMAND_ANSWER_OTHER.key()), false);
             AFKCommandMod.LOGGER.info(player.getName().getString() + " has been put AFK");
-            source = StateSource.OPERATOR_APPLIED;
+            player.getCapability(PlayerAFKStateProvider.AFK_STATE).ifPresent(cap -> {
+                if (cap.isAFK()) return;
+                success.set(true);
+                cap.putAFK(StateSource.OPERATOR_APPLIED, player);
+            });
+            if (success.get()) return 1;
+            else throw STATE_APPLIED_OTHER.create();
         }
-        StateSource finalSource = source;
-        AtomicBoolean success = new AtomicBoolean(false);
-        player.getCapability(PlayerAFKStateProvider.AFK_STATE).ifPresent(cap -> {
-            if (cap.isAFK()) return;
-            success.set(true);
-            cap.putAFK(finalSource, player);
-        });
-        if (!success.get()) throw STATE_APPLIED.create();
-        return 1;
+        return 0;
     }
 
 }

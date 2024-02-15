@@ -4,5 +4,5 @@
   "afk_command.commands.afk.other": "El jugador ahora está AFK",
   "afk_command.commands.error.invalid.player": "La entidad seleccionada no es un jugador.",
   "afk_command.commands.error.invalid.source": "Ningún jugador seleccionado. Se debe especificar el jugador a mandar AFK.",
-  "afk_command.commands.error.state.applied": "El jugador ya estaba AFK."
+  "afk_command.commands.error.state.applied.self": "El jugador ya estaba AFK."
 }

@@ -34,14 +34,14 @@ public class Config
                 .comment("Amount of ticks that should pass before kicking the player if AFK. Set it to -1 to turn off.")
                 .define("kickAfterTooLong", -1);
         AUTO_AFK_TIME = SERVER_BUILDER
-                .comment("Amount of ticks that should pass before putting the player on AFK. Set it to -1 to turn off. (Default is 3600 and that's 3 minutes).")
-                .define("autoApplyAFKAfterTooLong", 3600);
+                .comment("Amount of ticks that should pass before putting the player on AFK. Set it to -1 to turn off. (Default is 6000 and that's 5 minutes).")
+                .define("autoApplyAFKAfterTooLong", 6000);
         AFK_ON_LOGIN = SERVER_BUILDER
                 .comment("Players should spawn AFK on login. If combined with invinciblePlayers allows for a safe spawn.")
                 .define("afkOnLogin", true);
         AFK_COOLDOWN = SERVER_BUILDER
-                .comment("Amount of ticks that should pass before the player can go AFK again on their own. Set it to -1 to turn off. (Default is 12000 and that's 10 minutes).")
-                .define("afkCoolDown", 12000);
+                .comment("Amount of ticks that should pass before the player can go AFK again on their own. Set it to -1 to turn off.")
+                .define("afkCoolDown", -1);
 
         CHAT_CONFIRMATION = CLIENT_BUILDER
                 .comment("Set to true if you want to receive a chat confirmation of your AFK state when self applied.")
