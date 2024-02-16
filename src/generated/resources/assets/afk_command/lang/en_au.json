@@ -4,8 +4,8 @@
   "afk_command.commands.afk.other": "The player is now AFK",
   "afk_command.commands.error.invalid.player": "The selected entity is not a player.",
   "afk_command.commands.error.invalid.source": "No player selected. Must specify which player to put AFK",
-  "afk_command.commands.error.state.applied.other": "You are already AFK.",
-  "afk_command.commands.error.state.applied.self": "The player was already AFK.",
+  "afk_command.commands.error.state.applied.other": "The player was already AFK.",
+  "afk_command.commands.error.state.applied.self": "You are already AFK.",
   "afk_command.state.error.combat": "You are still in combat",
   "afk_command.state.error.cooldown": "You are still on cooldown (%ss left)",
   "afk_command.state.error.monsters": "There are monsters nearby"

@@ -25,18 +25,21 @@ public class MixinMouseHandler {
 
     @Inject(at = @At("HEAD"), method = "onPress(JIII)V", cancellable = false)
     private void onPress(long pWindowPointer, int pButton, int pAction, int pModifiers, CallbackInfo ci) {
+        ClientAFKStateHolder.currentIdleTime = 0;
         if (aFKCommand$isUnfocusedOrNotPlaying()) return;
         aFKCommand$exitAFK();
     }
 
     @Inject(at = @At("HEAD"), method = "onScroll(JDD)V", cancellable = false)
     private void onScroll(long pWindowPointer, double pXOffset, double pYOffset, CallbackInfo ci) {
+        ClientAFKStateHolder.currentIdleTime = 0;
         if (aFKCommand$isUnfocusedOrNotPlaying()) return;
         aFKCommand$exitAFK();
     }
 
     @Inject(at = @At("HEAD"), method = "onMove(JDD)V", cancellable = false)
     private void onMove(long pWindowPointer, double pXpos, double pYpos, CallbackInfo ci) {
+        ClientAFKStateHolder.currentIdleTime = 0;
         if (aFKCommand$isUnfocusedOrNotPlaying()) return;
         aFKCommand$exitAFK();
     }

@@ -63,11 +63,11 @@ public class AFKStateHandler {
             if (success.get()) return 1;
             else if (!wasCooldown.get()) throw STATE_APPLIED_SELF.create();
         } else {
-            cx.getSource().sendSuccess(() -> Component.translatable(LangKeys.COMMAND_ANSWER_OTHER.key()), false);
-            AFKCommandMod.LOGGER.info(player.getName().getString() + " has been put AFK");
             player.getCapability(PlayerAFKStateProvider.AFK_STATE).ifPresent(cap -> {
                 if (cap.isAFK()) return;
                 success.set(true);
+                cx.getSource().sendSuccess(() -> Component.translatable(LangKeys.COMMAND_ANSWER_OTHER.key()), false);
+                AFKCommandMod.LOGGER.info(player.getName().getString() + " has been put AFK");
                 cap.putAFK(StateSource.OPERATOR_APPLIED, player);
             });
             if (success.get()) return 1;

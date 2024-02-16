@@ -2,6 +2,8 @@ package com.aylanj123.afkcommand.networking;
 
 import com.aylanj123.afkcommand.AFKCommandMod;
 import com.aylanj123.afkcommand.networking.packets.GoneAFKS2CPacket;
+import com.aylanj123.afkcommand.networking.packets.IdleConfigS2CPacket;
+import com.aylanj123.afkcommand.networking.packets.IdledC2SPacket;
 import com.aylanj123.afkcommand.networking.packets.MovedC2SPacket;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;

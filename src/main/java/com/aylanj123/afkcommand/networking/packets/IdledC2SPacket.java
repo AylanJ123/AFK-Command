@@ -1,7 +1,7 @@
 package com.aylanj123.afkcommand.networking.packets;
 
-import com.aylanj123.afkcommand.afkstate.capability.PlayerAFKState;
 import com.aylanj123.afkcommand.afkstate.capability.PlayerAFKStateProvider;
+import com.aylanj123.afkcommand.afkstate.capability.StateSource;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.api.distmarker.Dist;
@@ -10,13 +10,13 @@ import net.minecraftforge.network.NetworkEvent;
 
 import java.util.function.Supplier;
 
-public class MovedC2SPacket {
+public class IdledC2SPacket {
 
-    public MovedC2SPacket() {
+    public IdledC2SPacket() {
 
     }
 
-    public MovedC2SPacket(FriendlyByteBuf buffer) {
+    public IdledC2SPacket(FriendlyByteBuf buffer) {
         this();
     }
 
@@ -31,7 +31,9 @@ public class MovedC2SPacket {
             cx.setPacketHandled(false);
             return;
         }
-        player.getCapability(PlayerAFKStateProvider.AFK_STATE).ifPresent(cap -> cap.removeAFK(player));
+        player.getCapability(PlayerAFKStateProvider.AFK_STATE).ifPresent(cap -> {
+            if (!cap.isAFK()) cap.putAFK(StateSource.IDLED_TOO_LONG, player);
+        });
         cx.setPacketHandled(true);
     }
 

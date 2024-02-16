@@ -23,16 +23,18 @@ public class MixinKeyboardInput {
 
     @Inject(at = @At("HEAD"), method = "tick(ZF)V", cancellable = false)
     private void tick(boolean pIsSneaking, float pSneakingSpeedMultiplier, CallbackInfo ci) {
-        if (!ClientAFKStateHolder.afk || options == null) return;
-        if (
-            options.keyUp.isDown() ||
-            options.keyDown.isDown() ||
-            options.keyLeft.isDown() ||
-            options.keyRight.isDown() ||
-            options.keyJump.isDown() ||
-            options.keyShift.isDown()
-        )
-            aFKCommand$exitAFK();
+        if (options == null) return;
+        boolean pressed = options.keyUp.isDown() ||
+                options.keyDown.isDown() ||
+                options.keyLeft.isDown() ||
+                options.keyRight.isDown() ||
+                options.keyJump.isDown() ||
+                options.keyShift.isDown();
+        if (pressed) {
+            ClientAFKStateHolder.currentIdleTime = 0;
+            if (ClientAFKStateHolder.afk)
+                aFKCommand$exitAFK();
+        }
     }
 
     @Unique

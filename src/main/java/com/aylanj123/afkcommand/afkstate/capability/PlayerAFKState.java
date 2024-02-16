@@ -50,7 +50,8 @@ public class PlayerAFKState {
             "%s has returned from being AFK after ticks %o (%fs) and had gone AFK %s",
             player.getName().getString(), timeAFK, timeAFK / 20F,
             source == StateSource.SELF_APPLY ? "on their own" :
-            source == StateSource.OPERATOR_APPLIED ? "because of an operator" : "on login"
+            source == StateSource.OPERATOR_APPLIED ? "because of an operator" :
+            source == StateSource.LOGIN_APPLIED ? "on login" : " by idling for too long"
         ));
         afk = false;
         timeAFK = -1;
