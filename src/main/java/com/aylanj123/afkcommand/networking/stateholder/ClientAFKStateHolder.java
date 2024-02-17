@@ -7,7 +7,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class ClientAFKStateHolder {
 
     public static boolean afk = false;
-    public static int timeIdle = 400;
+    public static int timeIdle = Integer.MAX_VALUE;
     public static int currentIdleTime = 0;
 
 }

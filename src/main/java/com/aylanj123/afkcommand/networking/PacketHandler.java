@@ -28,16 +28,28 @@ public class PacketHandler {
 
     public static void register() {
         INSTANCE.messageBuilder(
-            MovedC2SPacket.class, NetworkDirection.PLAY_TO_SERVER.ordinal()
+            MovedC2SPacket.class, 1, NetworkDirection.PLAY_TO_SERVER
                 ).encoder(MovedC2SPacket::encode)
                 .decoder(MovedC2SPacket::new)
                 .consumerMainThread(MovedC2SPacket::handle)
                 .add();
         INSTANCE.messageBuilder(
-            GoneAFKS2CPacket.class, NetworkDirection.PLAY_TO_CLIENT.ordinal()
+                        IdledC2SPacket.class, 2, NetworkDirection.PLAY_TO_SERVER
+                ).encoder(IdledC2SPacket::encode)
+                .decoder(IdledC2SPacket::new)
+                .consumerMainThread(IdledC2SPacket::handle)
+                .add();
+        INSTANCE.messageBuilder(
+            GoneAFKS2CPacket.class, 3, NetworkDirection.PLAY_TO_CLIENT
                 ).encoder(GoneAFKS2CPacket::encode)
                 .decoder(GoneAFKS2CPacket::new)
                 .consumerMainThread(GoneAFKS2CPacket::handle)
+                .add();
+        INSTANCE.messageBuilder(
+            IdleConfigS2CPacket.class, 4, NetworkDirection.PLAY_TO_CLIENT
+                ).encoder(IdleConfigS2CPacket::encode)
+                .decoder(IdleConfigS2CPacket::new)
+                .consumerMainThread(IdleConfigS2CPacket::handle)
                 .add();
     }
 

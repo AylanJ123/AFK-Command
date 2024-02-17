@@ -4,5 +4,10 @@
   "afk_command.commands.afk.other": "Spelaren är nu AFK",
   "afk_command.commands.error.invalid.player": "Den valda entiteten är inte en spelare.",
   "afk_command.commands.error.invalid.source": "Ingen spelare vald. Måste specificera vilken spelare som ska sättas AFK.",
-  "afk_command.commands.error.state.applied.self": "Spelaren är redan AFK."
+  "afk_command.commands.error.state.applied.other": "Spelaren är redan AFK.",
+  "afk_command.commands.error.state.applied.self": "You are already AFK.",
+  "afk_command.kick.idle": "You've idled for over %ss",
+  "afk_command.state.error.combat": "You are still in combat",
+  "afk_command.state.error.cooldown": "You are still on cooldown (%ss left)",
+  "afk_command.state.error.monsters": "There are monsters nearby"
 }

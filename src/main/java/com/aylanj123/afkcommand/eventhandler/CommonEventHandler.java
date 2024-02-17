@@ -70,7 +70,7 @@ public class CommonEventHandler {
         @SubscribeEvent
         static void commonSetUp(FMLCommonSetupEvent event) {
             AFKCommandMod.LOGGER.info("Common Set Up");
-            event.enqueueWork(PacketHandler::register);
+            PacketHandler.register();
         }
 
     }

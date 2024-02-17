@@ -16,6 +16,7 @@ public class Config
     public static final ForgeConfigSpec CLIENT_SPEC;
 
     private static final ForgeConfigSpec.ConfigValue<Boolean> INVINCIBLE_PLAYERS;
+    private static final ForgeConfigSpec.ConfigValue<Integer> COMBAT_TIME;
     private static final ForgeConfigSpec.ConfigValue<Integer> AFK_KICK_TIME;
     private static final ForgeConfigSpec.ConfigValue<Integer> AUTO_AFK_TIME;
     private static final ForgeConfigSpec.ConfigValue<Boolean> AFK_ON_LOGIN;
@@ -30,6 +31,9 @@ public class Config
         INVINCIBLE_PLAYERS = SERVER_BUILDER
                 .comment("Players should be invincible and untargetable while AFK. If true, players can't go AFK during combat or if monsters are nearby.")
                 .define("invinciblePlayers", false);
+        COMBAT_TIME = SERVER_BUILDER
+                .comment("Amount of ticks that should pass before the player leaves combat state. Ignored if invinciblePlayer is false. (Default is 400 and that's 20 seconds).")
+                .define("combatTime", 400);
         AFK_KICK_TIME = SERVER_BUILDER
                 .comment("Amount of ticks that should pass before kicking the player if AFK. Set it to -1 to turn off.")
                 .define("kickAfterTooLong", -1);
@@ -55,6 +59,7 @@ public class Config
     }
 
     public static boolean invinciblePlayers;
+    public static int combatTime;
     public static int timeToKick;
     public static int timeToSendAFK;
     public static boolean afkOnLogin;
@@ -64,6 +69,7 @@ public class Config
     public static void serverSidedLoad()
     {
         invinciblePlayers = INVINCIBLE_PLAYERS.get();
+        combatTime = COMBAT_TIME.get();
         timeToKick = AFK_KICK_TIME.get();
         timeToSendAFK = AUTO_AFK_TIME.get();
         afkOnLogin = AFK_ON_LOGIN.get();

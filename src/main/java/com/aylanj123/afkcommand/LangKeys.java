@@ -7,6 +7,7 @@ public enum LangKeys {
     STATE_ERROR_COOLDOWN("state.error.cooldown"),
     STATE_ERROR_COMBAT("state.error.combat"),
     STATE_ERROR_MONSTERS("state.error.monsters"),
+    KICK_IDLE("kick.idle"),
     COMMAND_ERROR_STATE_APPLIED_SELF("commands.error.state.applied.self"),
     COMMAND_ERROR_STATE_APPLIED_OTHER("commands.error.state.applied.other"),
     COMMAND_ERROR_INVALID_SOURCE("commands.error.invalid.source"),

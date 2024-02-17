@@ -29,8 +29,6 @@ public class ClientEventHandler {
     public static class ClientForgeEvents {
         @SubscribeEvent
         static void clientTick(TickEvent.ClientTickEvent event) {
-            AFKCommandMod.LOGGER.info(String.valueOf(ClientAFKStateHolder.currentIdleTime));
-            AFKCommandMod.LOGGER.info(String.valueOf(ClientAFKStateHolder.afk));
             if (event.side != LogicalSide.CLIENT || Minecraft.getInstance().player == null) return;
             if (++ClientAFKStateHolder.currentIdleTime > ClientAFKStateHolder.timeIdle) {
                 ClientAFKStateHolder.currentIdleTime = 0;

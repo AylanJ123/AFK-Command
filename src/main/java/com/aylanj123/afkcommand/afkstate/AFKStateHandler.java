@@ -13,7 +13,13 @@ import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.ai.targeting.TargetingConditions;
+import net.minecraft.world.entity.monster.Enemy;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.level.EntityGetter;
+import net.minecraft.world.phys.AABB;
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class AFKStateHandler {
@@ -41,9 +47,21 @@ public class AFKStateHandler {
         boolean self = cx.getSource().isPlayer() && cx.getSource().getPlayer() == player;
         AtomicBoolean success = new AtomicBoolean(false);
         if (self) {
-            AtomicBoolean wasCooldown = new AtomicBoolean(false);
+            AtomicBoolean commandError = new AtomicBoolean(true);
             player.getCapability(PlayerAFKStateProvider.AFK_STATE).ifPresent(cap -> {
                 if (cap.isAFK()) return;
+                if (Config.invinciblePlayers) {
+                    if (Config.combatTime + cap.getLastTimeCombat() > player.serverLevel().getGameTime()) {
+                        long timeLeft = (Config.combatTime + cap.getLastTimeCombat() - player.serverLevel().getGameTime()) / 20;
+                        player.displayClientMessage(Component.translatable(LangKeys.STATE_ERROR_COMBAT.key(), String.valueOf(timeLeft)), true);
+                        commandError.set(false);
+                        return;
+                    } else if (getMonstersNearby(player)) {
+                        player.displayClientMessage(Component.translatable(LangKeys.STATE_ERROR_MONSTERS.key()), true);
+                        commandError.set(false);
+                        return;
+                    }
+                }
                 if (
                     Config.afkCooldown != -1 &&
                     cap.getLastTimeAFK() != 0 &&
@@ -52,7 +70,7 @@ public class AFKStateHandler {
                 ) {
                     long timeLeft = (Config.afkCooldown + cap.getLastTimeAFK() - player.serverLevel().getGameTime()) / 20;
                     player.displayClientMessage(Component.translatable(LangKeys.STATE_ERROR_COOLDOWN.key(), String.valueOf(timeLeft)), true);
-                    wasCooldown.set(true);
+                    commandError.set(false);
                     return;
                 }
                 if (Config.chatConfirmation) cx.getSource().sendSuccess(() -> Component.translatable(LangKeys.COMMAND_ANSWER_ENTER.key()), false);
@@ -61,7 +79,7 @@ public class AFKStateHandler {
                 success.set(true);
             });
             if (success.get()) return 1;
-            else if (!wasCooldown.get()) throw STATE_APPLIED_SELF.create();
+            else if (commandError.get()) throw STATE_APPLIED_SELF.create();
         } else {
             player.getCapability(PlayerAFKStateProvider.AFK_STATE).ifPresent(cap -> {
                 if (cap.isAFK()) return;
@@ -74,6 +92,23 @@ public class AFKStateHandler {
             else throw STATE_APPLIED_OTHER.create();
         }
         return 0;
+    }
+
+    private static boolean getMonstersNearby(ServerPlayer player) {
+        List<Monster> monsters = player.serverLevel().getNearbyEntities(
+            Monster.class,
+            TargetingConditions.forCombat(),
+            player,
+            new AABB(
+                player.getX() + 5,
+                player.getY() + 3,
+                player.getZ() + 5,
+                player.getX() - 5,
+                player.getY() - 3,
+                player.getZ() - 5
+            )
+        );
+        return !monsters.isEmpty();
     }
 
 }

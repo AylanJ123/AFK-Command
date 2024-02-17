@@ -16,10 +16,11 @@ public class EnglishLanguageProvider extends LanguageProvider {
         add(LangKeys.COMMAND_ANSWER_ENTER.key(), "You are now AFK");
         add(LangKeys.COMMAND_ANSWER_EXIT.key(), "You aren't AFK anymore");
         add(LangKeys.COMMAND_ANSWER_OTHER.key(), "The player is now AFK");
-        add(LangKeys.STATE_ERROR_COOLDOWN.key(), "You are still on cooldown (%ss left)"); //
-        add(LangKeys.STATE_ERROR_COMBAT.key(), "You are still in combat"); //
-        add(LangKeys.STATE_ERROR_MONSTERS.key(), "There are monsters nearby"); //
-        add(LangKeys.COMMAND_ERROR_STATE_APPLIED_SELF.key(), "You are already AFK."); //
+        add(LangKeys.STATE_ERROR_COOLDOWN.key(), "You are still on cooldown (%ss left)");
+        add(LangKeys.STATE_ERROR_COMBAT.key(), "You are still in combat (%ss left)");
+        add(LangKeys.STATE_ERROR_MONSTERS.key(), "There are monsters nearby");
+        add(LangKeys.KICK_IDLE.key(), "You've idled for over %ss");
+        add(LangKeys.COMMAND_ERROR_STATE_APPLIED_SELF.key(), "You are already AFK.");
         add(LangKeys.COMMAND_ERROR_STATE_APPLIED_OTHER.key(), "The player was already AFK.");
         add(LangKeys.COMMAND_ERROR_INVALID_SOURCE.key(), "No player selected. Must specify which player to put AFK");
         add(LangKeys.COMMAND_ERROR_INVALID_PLAYER.key(), "The selected entity is not a player.");

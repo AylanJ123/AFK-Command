@@ -6,7 +6,8 @@
   "afk_command.commands.error.invalid.source": "No player selected. Must specify which player to put AFK",
   "afk_command.commands.error.state.applied.other": "The player was already AFK.",
   "afk_command.commands.error.state.applied.self": "You are already AFK.",
-  "afk_command.state.error.combat": "You are still in combat",
+  "afk_command.kick.idle": "You've idled for over %ss",
+  "afk_command.state.error.combat": "You are still in combat (%ss left)",
   "afk_command.state.error.cooldown": "You are still on cooldown (%ss left)",
   "afk_command.state.error.monsters": "There are monsters nearby"
 }

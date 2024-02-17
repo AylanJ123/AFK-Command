@@ -4,5 +4,10 @@
   "afk_command.commands.afk.other": "Der Spieler ist nun AFK",
   "afk_command.commands.error.invalid.player": "Die ausgewählte entität ist kein Spieler.",
   "afk_command.commands.error.invalid.source": "Kein Spieler angegeben. Es muss ein Spieler angegeben werden, der AFK gehen soll.",
-  "afk_command.commands.error.state.applied.self": "TDer Spieler ist bereits AFK."
+  "afk_command.commands.error.state.applied.other": "TDer Spieler ist bereits AFK.",
+  "afk_command.commands.error.state.applied.self": "You are already AFK.",
+  "afk_command.kick.idle": "You've idled for over %ss",
+  "afk_command.state.error.combat": "You are still in combat",
+  "afk_command.state.error.cooldown": "You are still on cooldown (%ss left)",
+  "afk_command.state.error.monsters": "There are monsters nearby"
 }

@@ -4,5 +4,10 @@
   "afk_command.commands.afk.other": "El jugador ahora está AFK",
   "afk_command.commands.error.invalid.player": "La entidad seleccionada no es un jugador.",
   "afk_command.commands.error.invalid.source": "Ningún jugador seleccionado. Se debe especificar el jugador a mandar AFK.",
-  "afk_command.commands.error.state.applied.self": "El jugador ya estaba AFK."
+  "afk_command.commands.error.state.applied.other": "El jugador ya estaba AFK.",
+  "afk_command.commands.error.state.applied.self": "Ya estabas AFK.",
+  "afk_command.kick.idle": "Has estado quieto por más de %ss",
+  "afk_command.state.error.combat": "Aún estás en combate (faltan %ss)",
+  "afk_command.state.error.cooldown": "Sigues en enfriamiento (faltan %ss)",
+  "afk_command.state.error.monsters": "Hay monstruos cerca"
 }

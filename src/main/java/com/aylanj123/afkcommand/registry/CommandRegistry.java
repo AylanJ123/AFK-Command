@@ -18,6 +18,11 @@ public class CommandRegistry {
     public static LiteralArgumentBuilder<CommandSourceStack> getAFKCommand() {
         return Commands.literal("afk")
             .executes(AFKStateHandler::AddAFKStateToPlayer)
+            .then(getAFKOPCommand());
+    }
+
+    public static LiteralArgumentBuilder<CommandSourceStack> getAFKOPCommand() {
+        return Commands.literal("force")
             .then(getArgument())
             .requires(commSrc -> commSrc.hasPermission(2));
     }

@@ -7,6 +7,8 @@ import com.aylanj123.afkcommand.networking.PacketHandler;
 import com.aylanj123.afkcommand.networking.packets.GoneAFKS2CPacket;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.level.block.BedBlock;
+import net.minecraft.world.level.block.entity.BedBlockEntity;
 
 public class PlayerAFKState {
 
@@ -14,6 +16,7 @@ public class PlayerAFKState {
     private StateSource source;
     private int timeAFK;
     private long lastTimeAFK;
+    private long lastTimeCombat;
 
     public boolean isAFK() {
         return afk;
@@ -33,6 +36,13 @@ public class PlayerAFKState {
 
     public long getLastTimeAFK() {
         return lastTimeAFK;
+    }
+    public long getLastTimeCombat() {
+        return lastTimeCombat;
+    }
+
+    public void setLastTimeCombat(ServerPlayer player) {
+        this.lastTimeCombat = player.serverLevel().getGameTime();
     }
 
     public void putAFK(StateSource source, ServerPlayer player) {
@@ -66,6 +76,7 @@ public class PlayerAFKState {
         afk = oldState.afk;
         source = oldState.source;
         timeAFK = oldState.timeAFK;
+        lastTimeCombat = oldState.lastTimeCombat;
     }
 
     private void updateSleep(ServerPlayer player) {
