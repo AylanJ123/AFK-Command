@@ -1,60 +1,60 @@
-[17Feb2024 01:36:46.268] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\aylan\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.20, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, afk_command, --all, --output, D:\Modding\Minecraft\Mods\AFK Command\src\generated\resources, --existing, D:\Modding\Minecraft\Mods\AFK Command\src\main\resources, --mixin.config, afk_command.mixins.json]
-[17Feb2024 01:36:46.271] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.9 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0
-[17Feb2024 01:36:46.421] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[17Feb2024 01:36:46.463] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/aylan/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[17Feb2024 01:36:46.717] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.20\918959a037ab7191a0c45a359f4746ab76c110c3\javafmllanguage-1.20.1-47.2.20.jar is missing mods.toml file
-[17Feb2024 01:36:46.721] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.20\c1d1efcb98e8bfcf3dbfed0d1e81b55b648b86bf\lowcodelanguage-1.20.1-47.2.20.jar is missing mods.toml file
-[17Feb2024 01:36:46.724] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.20\efca3bee89c0085192b122d47334692b921ca7d1\mclanguage-1.20.1-47.2.20.jar is missing mods.toml file
-[17Feb2024 01:36:46.728] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.20\12cd436f148405b50c9b16bd8f3cc6f18db89824\fmlcore-1.20.1-47.2.20.jar is missing mods.toml file
-[17Feb2024 01:36:46.922] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[17Feb2024 01:36:47.835] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[17Feb2024 01:36:47.840] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\aylan\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, afk_command, --all, --output, D:\Modding\Minecraft\Mods\AFK Command\src\generated\resources, --existing, D:\Modding\Minecraft\Mods\AFK Command\src\main\resources]
-[17Feb2024 01:36:47.900] [main/WARN] [mixin/]: Reference map 'afk_command.refmap.json' for afk_command.mixins.json could not be read. If this is a development environment you can ignore this message
-[17Feb2024 01:36:48.118] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [afk_command]
-[17Feb2024 01:36:51.339] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.20, for MC 1.20.1 with MCP 20230612.114412
-[17Feb2024 01:36:51.339] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.20 Initialized
-[17Feb2024 01:36:51.612] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[17Feb2024 01:36:51.617] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.657 ms
-[17Feb2024 01:36:51.820] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/aylan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[17Feb2024 01:36:51.821] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/aylan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[17Feb2024 01:36:51.931] [main/INFO] [com.aylanj123.afkcommand.AFKCommandMod/]: Generating new data
-[17Feb2024 01:36:51.942] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_us
-[17Feb2024 01:36:51.961] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_us finished after 18 ms
-[17Feb2024 01:36:51.961] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_nz
-[17Feb2024 01:36:51.964] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_nz finished after 2 ms
-[17Feb2024 01:36:51.964] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_gb
-[17Feb2024 01:36:51.967] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_gb finished after 3 ms
-[17Feb2024 01:36:51.967] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_ca
-[17Feb2024 01:36:51.971] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_ca finished after 3 ms
-[17Feb2024 01:36:51.971] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_au
-[17Feb2024 01:36:51.977] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_au finished after 6 ms
-[17Feb2024 01:36:51.978] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ve
-[17Feb2024 01:36:51.981] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ve finished after 3 ms
-[17Feb2024 01:36:51.981] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_uy
-[17Feb2024 01:36:51.985] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_uy finished after 2 ms
-[17Feb2024 01:36:51.985] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_mx
-[17Feb2024 01:36:51.987] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_mx finished after 2 ms
-[17Feb2024 01:36:51.987] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_es
-[17Feb2024 01:36:51.991] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_es finished after 3 ms
-[17Feb2024 01:36:51.991] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ec
-[17Feb2024 01:36:51.994] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ec finished after 2 ms
-[17Feb2024 01:36:51.994] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_cl
-[17Feb2024 01:36:51.998] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_cl finished after 3 ms
-[17Feb2024 01:36:51.998] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ar
-[17Feb2024 01:36:52.001] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ar finished after 2 ms
-[17Feb2024 01:36:52.001] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: de_de
-[17Feb2024 01:36:52.002] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: de_de finished after 0 ms
-[17Feb2024 01:36:52.002] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: de_at
-[17Feb2024 01:36:52.003] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: de_at finished after 0 ms
-[17Feb2024 01:36:52.003] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: de_ch
-[17Feb2024 01:36:52.004] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: de_ch finished after 0 ms
-[17Feb2024 01:36:52.004] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: nds_de
-[17Feb2024 01:36:52.004] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: nds_de finished after 0 ms
-[17Feb2024 01:36:52.004] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: pt_pt
-[17Feb2024 01:36:52.013] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: pt_pt finished after 8 ms
-[17Feb2024 01:36:52.013] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: pt_br
-[17Feb2024 01:36:52.013] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: pt_br finished after 0 ms
-[17Feb2024 01:36:52.013] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: sv_se
-[17Feb2024 01:36:52.014] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: sv_se finished after 0 ms
-[17Feb2024 01:36:52.014] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 72 ms
-[17Feb2024 01:36:52.293] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 19, old count: 19, new count: 20, removed stale: 0, written: 12
+[17Feb2024 13:45:14.271] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\aylan\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.20, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, afk_command, --all, --output, D:\Modding\Minecraft\Mods\AFK Command\src\generated\resources, --existing, D:\Modding\Minecraft\Mods\AFK Command\src\main\resources, --mixin.config, afk_command.mixins.json]
+[17Feb2024 13:45:14.276] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.9 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0
+[17Feb2024 13:45:14.398] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[17Feb2024 13:45:14.446] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/aylan/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[17Feb2024 13:45:14.789] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.20\918959a037ab7191a0c45a359f4746ab76c110c3\javafmllanguage-1.20.1-47.2.20.jar is missing mods.toml file
+[17Feb2024 13:45:14.792] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.20\c1d1efcb98e8bfcf3dbfed0d1e81b55b648b86bf\lowcodelanguage-1.20.1-47.2.20.jar is missing mods.toml file
+[17Feb2024 13:45:14.795] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.20\efca3bee89c0085192b122d47334692b921ca7d1\mclanguage-1.20.1-47.2.20.jar is missing mods.toml file
+[17Feb2024 13:45:14.799] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aylan\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.20\12cd436f148405b50c9b16bd8f3cc6f18db89824\fmlcore-1.20.1-47.2.20.jar is missing mods.toml file
+[17Feb2024 13:45:14.916] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[17Feb2024 13:45:16.264] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[17Feb2024 13:45:16.269] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\aylan\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, afk_command, --all, --output, D:\Modding\Minecraft\Mods\AFK Command\src\generated\resources, --existing, D:\Modding\Minecraft\Mods\AFK Command\src\main\resources]
+[17Feb2024 13:45:16.333] [main/WARN] [mixin/]: Reference map 'afk_command.refmap.json' for afk_command.mixins.json could not be read. If this is a development environment you can ignore this message
+[17Feb2024 13:45:16.686] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [afk_command]
+[17Feb2024 13:45:20.569] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.20, for MC 1.20.1 with MCP 20230612.114412
+[17Feb2024 13:45:20.570] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.20 Initialized
+[17Feb2024 13:45:20.960] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[17Feb2024 13:45:20.964] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.807 ms
+[17Feb2024 13:45:21.355] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/aylan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[17Feb2024 13:45:21.355] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/aylan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.20_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[17Feb2024 13:45:21.478] [main/INFO] [com.aylanj123.afkcommand.AFKCommandMod/]: Generating new data
+[17Feb2024 13:45:21.534] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_us
+[17Feb2024 13:45:21.544] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_us finished after 10 ms
+[17Feb2024 13:45:21.544] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_nz
+[17Feb2024 13:45:21.547] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_nz finished after 2 ms
+[17Feb2024 13:45:21.547] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_gb
+[17Feb2024 13:45:21.549] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_gb finished after 2 ms
+[17Feb2024 13:45:21.550] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_ca
+[17Feb2024 13:45:21.552] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_ca finished after 2 ms
+[17Feb2024 13:45:21.552] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: en_au
+[17Feb2024 13:45:21.555] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: en_au finished after 2 ms
+[17Feb2024 13:45:21.555] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ve
+[17Feb2024 13:45:21.558] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ve finished after 2 ms
+[17Feb2024 13:45:21.558] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_uy
+[17Feb2024 13:45:21.560] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_uy finished after 2 ms
+[17Feb2024 13:45:21.561] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_mx
+[17Feb2024 13:45:21.561] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_mx finished after 1 ms
+[17Feb2024 13:45:21.561] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_es
+[17Feb2024 13:45:21.563] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_es finished after 1 ms
+[17Feb2024 13:45:21.563] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ec
+[17Feb2024 13:45:21.565] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ec finished after 1 ms
+[17Feb2024 13:45:21.565] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_cl
+[17Feb2024 13:45:21.567] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_cl finished after 1 ms
+[17Feb2024 13:45:21.567] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: es_ar
+[17Feb2024 13:45:21.569] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: es_ar finished after 1 ms
+[17Feb2024 13:45:21.569] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: de_de
+[17Feb2024 13:45:21.572] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: de_de finished after 2 ms
+[17Feb2024 13:45:21.572] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: de_at
+[17Feb2024 13:45:21.616] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: de_at finished after 43 ms
+[17Feb2024 13:45:21.616] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: de_ch
+[17Feb2024 13:45:21.643] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: de_ch finished after 26 ms
+[17Feb2024 13:45:21.643] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: nds_de
+[17Feb2024 13:45:21.650] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: nds_de finished after 6 ms
+[17Feb2024 13:45:21.651] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: pt_pt
+[17Feb2024 13:45:21.657] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: pt_pt finished after 5 ms
+[17Feb2024 13:45:21.657] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: pt_br
+[17Feb2024 13:45:21.660] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: pt_br finished after 2 ms
+[17Feb2024 13:45:21.660] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Languages: sv_se
+[17Feb2024 13:45:21.662] [main/INFO] [net.minecraft.data.DataGenerator/]: Languages: sv_se finished after 2 ms
+[17Feb2024 13:45:21.663] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 130 ms
+[17Feb2024 13:45:22.299] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 19, old count: 19, new count: 20, removed stale: 0, written: 19

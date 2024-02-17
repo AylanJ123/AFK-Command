@@ -18,7 +18,7 @@ public class EnglishLanguageProvider extends LanguageProvider {
         add(LangKeys.COMMAND_ANSWER_OTHER.key(), "The player is now AFK");
         add(LangKeys.STATE_ERROR_COOLDOWN.key(), "You are still on cooldown (%ss left)");
         add(LangKeys.STATE_ERROR_COMBAT.key(), "You are still in combat (%ss left)");
-        add(LangKeys.STATE_ERROR_MONSTERS.key(), "There are monsters nearby");
+        add(LangKeys.STATE_ERROR_MONSTERS.key(), "Unseen threats lurk nearby...");
         add(LangKeys.KICK_IDLE.key(), "You've idled for over %ss");
         add(LangKeys.COMMAND_ERROR_STATE_APPLIED_SELF.key(), "You are already AFK.");
         add(LangKeys.COMMAND_ERROR_STATE_APPLIED_OTHER.key(), "The player was already AFK.");

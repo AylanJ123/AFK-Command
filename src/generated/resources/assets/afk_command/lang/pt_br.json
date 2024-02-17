@@ -5,9 +5,9 @@
   "afk_command.commands.error.invalid.player": "A entidade selecionada não é um jogador.",
   "afk_command.commands.error.invalid.source": "Nenhum jogador selecionado. Deve especificar qual jogador para ser posto como AFK.",
   "afk_command.commands.error.state.applied.other": "O jogador já estava AFK.",
-  "afk_command.commands.error.state.applied.self": "You are already AFK.",
-  "afk_command.kick.idle": "You've idled for over %ss",
-  "afk_command.state.error.combat": "You are still in combat",
-  "afk_command.state.error.cooldown": "You are still on cooldown (%ss left)",
-  "afk_command.state.error.monsters": "There are monsters nearby"
+  "afk_command.commands.error.state.applied.self": "Você já está AFK.",
+  "afk_command.kick.idle": "Você esteve inativo por %s segundos a mais",
+  "afk_command.state.error.combat": "Você ainda está em combate (%s segundos restantes)",
+  "afk_command.state.error.cooldown": "Você ainda está no tempo de recarga (%s segundos restantes)",
+  "afk_command.state.error.monsters": "Ameaças escondidas observam-te por perto..."
 }

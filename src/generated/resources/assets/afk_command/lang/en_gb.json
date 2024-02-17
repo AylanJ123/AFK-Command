@@ -9,5 +9,5 @@
   "afk_command.kick.idle": "You've idled for over %ss",
   "afk_command.state.error.combat": "You are still in combat (%ss left)",
   "afk_command.state.error.cooldown": "You are still on cooldown (%ss left)",
-  "afk_command.state.error.monsters": "There are monsters nearby"
+  "afk_command.state.error.monsters": "Unseen threats lurk nearby..."
 }

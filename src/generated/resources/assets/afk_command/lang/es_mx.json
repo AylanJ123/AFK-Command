@@ -9,5 +9,5 @@
   "afk_command.kick.idle": "Has estado quieto por más de %ss",
   "afk_command.state.error.combat": "Aún estás en combate (faltan %ss)",
   "afk_command.state.error.cooldown": "Sigues en enfriamiento (faltan %ss)",
-  "afk_command.state.error.monsters": "Hay monstruos cerca"
+  "afk_command.state.error.monsters": "Amenazas ocultas acechan cerca..."
 }
