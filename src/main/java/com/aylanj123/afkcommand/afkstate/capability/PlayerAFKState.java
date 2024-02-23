@@ -57,7 +57,7 @@ public class PlayerAFKState {
 
     public void removeAFK(ServerPlayer player) {
         AFKCommandMod.LOGGER.info(String.format(
-            "%s has returned from being AFK after ticks %o (%fs) and had gone AFK %s",
+            "%s has returned from being AFK after %o ticks (%fs) and had gone AFK %s",
             player.getName().getString(), timeAFK, timeAFK / 20F,
             source == StateSource.SELF_APPLY ? "on their own" :
             source == StateSource.OPERATOR_APPLIED ? "because of an operator" :
