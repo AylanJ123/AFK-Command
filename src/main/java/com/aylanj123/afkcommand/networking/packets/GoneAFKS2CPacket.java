@@ -4,8 +4,8 @@ package com.aylanj123.afkcommand.networking.packets;
 import com.aylanj123.afkcommand.networking.stateholder.ClientAFKStateHolder;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.network.CustomPayloadEvent;
 import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.network.NetworkEvent;
 
 import java.util.function.Supplier;
 
@@ -23,8 +23,7 @@ public class GoneAFKS2CPacket {
 
     }
 
-    public void handle(Supplier<NetworkEvent.ServerCustomPayloadEvent.Context> cxSupplier) {
-        NetworkEvent.Context cx = cxSupplier.get();
+    public static void handle(GoneAFKS2CPacket msg, CustomPayloadEvent.Context cx) {
         ClientAFKStateHolder.afk = true;
         cx.setPacketHandled(true);
     }

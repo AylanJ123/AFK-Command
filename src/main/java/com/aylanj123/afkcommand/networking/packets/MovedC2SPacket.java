@@ -5,8 +5,8 @@ import com.aylanj123.afkcommand.afkstate.capability.PlayerAFKStateProvider;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.network.CustomPayloadEvent;
 import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.network.NetworkEvent;
 
 import java.util.function.Supplier;
 
@@ -24,8 +24,7 @@ public class MovedC2SPacket {
 
     }
 
-    public void handle(Supplier<NetworkEvent.ClientCustomPayloadEvent.Context> cxSupplier) {
-        NetworkEvent.Context cx = cxSupplier.get();
+    public static void handle(MovedC2SPacket msg, CustomPayloadEvent.Context cx) {
         ServerPlayer player = cx.getSender();
         if (player == null) {
             cx.setPacketHandled(false);

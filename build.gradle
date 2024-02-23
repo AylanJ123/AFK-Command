@@ -125,9 +125,6 @@ repositories {
     maven { // JEI
         url "https://maven.blamejared.com"
     }
-    maven { // TOP
-        url "https://maven.k-4u.nl"
-    }
 }
 
 dependencies {
@@ -143,10 +140,6 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
-
-    implementation fg.deobf(project.dependencies.create("mcjty.theoneprobe:theoneprobe:${top_version}") {
-        transitive = false
-    })
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
