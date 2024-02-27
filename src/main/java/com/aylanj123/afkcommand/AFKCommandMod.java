@@ -28,8 +28,8 @@ public class AFKCommandMod
     public AFKCommandMod()
     {
         MinecraftForge.EVENT_BUS.register(ServerEventHandler.ServerForgeEvents.class);
-        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC, "afk_command-server.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Config.CLIENT_SPEC, "afk_command-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC, MODID + "-server.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Config.CLIENT_SPEC, MODID + "-client.toml");
     }
 
 }
